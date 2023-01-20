@@ -9,7 +9,7 @@ const getRegister = (req, res) => {
 const postRegister = (req, res, next) => {
     bcrypt.hash(req.body.password, 10, function (err, hashedPassword) {
         if (err) {
-            res.redirect("/redister")
+            res.redirect("/register")
         }
 
         let user = new User({
