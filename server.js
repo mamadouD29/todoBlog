@@ -9,7 +9,7 @@ const methodOverride = require("method-override")
 const app = express()
 const port = process.env.PORT || 3000;
 
-const dbUri = "mongodb://127.0.0.1:27017/noter"
+const dbUri = "mongodb+srv://Mamadou:Versus22@cluster0.occcwxf.mongodb.net/note"
 
 app.set("view engine", "ejs")
 // middleware 
