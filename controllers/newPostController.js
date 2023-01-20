@@ -16,7 +16,7 @@ const postNew = (req, res) => {
             userid: req.session.userId
         })
         .then(result =>{ 
-            console.log("userid: ", Notes.userid);
+            // console.log("userid: ", Notes.userid);
             res.redirect("/notes"),{notes: result}})
         .catch(err => console.log(err))
 
