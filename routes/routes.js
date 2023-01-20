@@ -53,7 +53,7 @@ router.post("https://notaker.onrender.com/login", postLogin)
 router.get("https://notaker.onrender.com/logout", logout)
 
 
-router.get("/register", getRegister)
+router.get("https://notaker.onrender.com/register", getRegister)
 router.post("https://notaker.onrender.com/register", postRegister)
 
 
