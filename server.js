@@ -23,9 +23,10 @@ app.use(express.urlencoded({
 mongoose.set('strictQuery', true)
 
 mongoose.connect(dbUri)
-    .then(result => app.listen(port, () => console.log(`Server listening on port ${port}!`)))
+    .then(result => () => console.log("Monggose connected ...!"))
     .catch(err => console.log(err))
 
+app.listen(port, () => console.log(`Server listening on port ${port}!`)))
 
 // express-session 
 app.use(session({
