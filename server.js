@@ -38,7 +38,11 @@ app.use(session({
     })
 }))
 
-
+global.loggedIn = null;
+app.use("*", (req, res, next) => {
+    loggedIn = req.session.userId;
+    next();
+})
 // route
 
 app.use(routes);

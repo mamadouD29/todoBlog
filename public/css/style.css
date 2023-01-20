@@ -93,7 +93,10 @@ nav ul li a {
 }
 
 
-
+.err-content {
+    text-align: center;
+    color: white;
+}
 
 /* footer */
 
@@ -101,8 +104,13 @@ footer {
     margin-top: 2em;
     text-align: center;
     /* color: var(--wlc-msg-co); */
+    color: rgb(234, 231, 231);
+    font-weight: bolder;
 
 }
+
+
+
 
 @media (min-width: 800px) {
 

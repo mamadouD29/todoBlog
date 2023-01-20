@@ -64,4 +64,9 @@ router.post("/register", postRegister)
 router.get("/notes", authMiddleware, getNotes)
 router.delete("/notes/:id", authMiddleware, deleteNote)
 
+
+router.use((req, res) => {
+    res.status(404).render("note/404");
+})
+
 module.exports = router;
