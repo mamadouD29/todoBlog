@@ -9,15 +9,18 @@ const getNew = (req, res) => {
 const postNew = (req, res) => {
 
 
-     Notes.create({
+    Notes.create({
             title: req.body.title,
             snippet: req.body.snippet,
             body: req.body.body,
             userid: req.session.userId
         })
-        .then(result =>{ 
-            // console.log("userid: ", Notes.userid);
-            res.redirect("/notes"),{notes: result}})
+        .then(result => {
+            console.log("userid: ", Notes.userid);
+            res.redirect("/notes"), {
+                notes: result
+            }
+        })
         .catch(err => console.log(err))
 
 
