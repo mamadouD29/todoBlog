@@ -26,7 +26,7 @@ mongoose.connect(dbUri)
     .then(result => () => console.log("Monggose connected ...!"))
     .catch(err => console.log(err))
 
-app.listen(port, () => console.log(`Server listening on port ${port}!`)))
+app.listen(port, () => console.log(`Server listening on port ${port}!`))
 
 // express-session 
 app.use(session({
