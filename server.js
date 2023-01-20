@@ -28,15 +28,20 @@ mongoose.connect(dbUri)
 
 app.listen(port, () => console.log(`Server listening on port ${port}!`))
 
+app.set('trust proxy', 1)
 // express-session 
 app.use(session({
-    secret: "chionfoungo",
+    secret: "keyboard cat",
     saveUninitialized: false,
     resave: true,
     store: MongoStore.create({
         mongoUrl: dbUri,
         ttl: 1 * 24 * 60 * 60
-    })
+    }),
+    cookie: {
+        secure: true
+    }
+
 }))
 
 global.loggedIn = null;
