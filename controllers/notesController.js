@@ -20,6 +20,7 @@ const deleteNote =  (req, res)=>{
     
     Notes.findByIdAndDelete(id)
     .then(result => res.redirect("/notes"))
+    .catch(err => console.log(err))
 }
 
 module.exports = {

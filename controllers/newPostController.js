@@ -6,10 +6,10 @@ const getNew = (req, res) => {
 }
 
 
-const postNew = async (req, res) => {
+const postNew = (req, res) => {
 
 
-    await Notes.create({
+     Notes.create({
             title: req.body.title,
             snippet: req.body.snippet,
             body: req.body.body,

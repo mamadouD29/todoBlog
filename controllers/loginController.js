@@ -33,6 +33,7 @@ const postLogin = (req, res) => {
                 res.redirect("/login")
             }
         })
+        .catch(err => console.log(err))
 }
 
 module.exports = {
