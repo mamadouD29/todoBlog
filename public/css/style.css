@@ -1,0 +1,120 @@
+:root {
+    --bdr1: 2px solid rgb(0, 0, 0);
+    --bdr2: 2px solid rgb(234, 6, 6);
+    --bdr3: 2px solid rgb(3, 33, 184);
+
+    --h-bg1: rgb(210, 109, 109);
+    --h-bg2: rgb(7, 188, 155);
+    --h-bg3: rgb(88, 82, 162);
+
+    --wlc-msg-co: rgb(216, 211, 211);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+
+#page {
+    min-height: 100vh;
+    border: var(--bdr1);
+    width: 100%;
+    overflow-x: hidden;
+    /* background: blue; */
+}
+
+.page-content {
+    border: 2px solid black;
+    background: url(../img/1.jpg) center/cover;
+    min-height: 100vh;
+
+}
+
+.note-page {
+    min-height: 100vh;
+    background: url(../img/2.jpg) top/cover;
+    /* margin-top: 0; */
+}
+
+
+header {
+    height: auto;
+    background: var(--h-bg2);
+    padding: 0 1em;
+}
+
+
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+
+
+nav ul li {
+    list-style-type: none;
+    padding: 1em;
+}
+
+nav ul li a {
+    display: block;
+    text-decoration: none;
+}
+
+.card {
+    background: rgb(218, 220, 218, 0.7);
+}
+
+.container form {
+    background: rgb(86, 223, 225);
+    padding: 2em;
+}
+
+/* main */
+/* main {
+} */
+
+.welcome article {
+    width: 100%;
+    margin: 0 auto;
+
+
+}
+
+
+
+.welcome article hgroup h1 {
+    color: var(--wlc-msg-co);
+    font-size: 2.5em;
+    text-align: center;
+}
+
+
+
+
+/* footer */
+
+footer {
+    margin-top: 2em;
+    text-align: center;
+    /* color: var(--wlc-msg-co); */
+
+}
+
+@media (min-width: 800px) {
+
+    .welcome article {
+        width: 50%;
+        margin: 0 auto 0;
+
+    }
+
+    nav ul li:nth-child(3) {
+        margin-right: auto;
+    }
+
+
+}

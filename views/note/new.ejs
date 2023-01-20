@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head") %>
+
+<body>
+    <div id="page">
+        <div class="note-page">
+            <%- include ("../partials/nav.ejs") %>
+
+            <main>
+                <section class="new-notes">
+                    <div class="container">
+                        <div class="mb-3">
+                            <a href="/" class="btn btn-primary">Home</a>
+                        </div>
+                        <hgroup>
+
+                            <h1 class="mb-3">New Note</h1>
+
+                        </hgroup>
+
+
+                        <form action="/new" method="POST">
+                            <div class="form-group mb-3">
+                                <label for="title">Title</label>
+                                <input type="text" name="title" id="title" class="form-control" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="snippet">Snippet</label>
+                                <input type="text" name="snippet" id="snippet" class="form-control" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="body">Body</label>
+                                <textarea name="body" id="body" cols="30" rows="10" class="form-control"></textarea>
+                                <script>
+                                    $('#body').summernote({
+                                        placeholder: 'Hello bootstrap 4',
+                                        tabsize: 2,
+                                        height: 200
+                                    });
+                                </script>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="reset" class="btn btn-danger">Clear</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </section>
+            </main>
+
+            <%-include("../partials/footer.ejs") %>
+        </div>
+    </div>
+</body>
+
+</html>

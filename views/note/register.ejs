@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("../partials/head") %>
+
+<body>
+    <div id="page">
+        <div class="note-page">
+        <%- include ("../partials/nav.ejs") %>
+            <main>
+                <section class="new-notes">
+                    <div class="container">
+                        <div class="mb-3">
+                            <a href="/" class="btn btn-primary">Home</a>
+                        </div>
+
+                        <form action="/register" method="POST">
+                            <div class="form-group mb-3">
+                                <label for="username">Username</label>
+                                <input type="text" name="username" id="username" class="form-control" minlength="4"
+                                    maxlength="12" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" class="form-control"
+                                    pattern=".{5,}" title="five or more characters" required>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-control"
+                                    pattern="[a-z0-9._%+-]+@gmail.com$" title="gmail.com" required>
+                            </div>
+
+
+                            <div class="form-group mb-3">
+                                <button type="submit" class="btn btn-primary">Register</button>
+                                <button type="reset" class="btn btn-danger">Clear</button>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </section>
+            </main>
+            
+            <%-include("../partials/footer.ejs") %>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
