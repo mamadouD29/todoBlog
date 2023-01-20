@@ -47,8 +47,8 @@ router.get("https://notaker.onrender.com/index", (req, res) => {
 router.get("https://notaker.onrender.com/new", authMiddleware, getNew)
 router.post("https://notaker.onrender.com/new", authMiddleware, postNew)
 
-router.get("https://notaker.onrender.com/login", getLogin)
-router.post("https://notaker.onrender.com/login", postLogin)
+router.get("/login", getLogin)
+router.post("/login", postLogin)
 
 router.get("https://notaker.onrender.com/logout", logout)
 
