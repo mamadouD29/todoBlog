@@ -38,7 +38,7 @@ router.get("/", (req, res) => {
 })
 
 
-router.get("https://notaker.onrender.com/index", (req, res) => {
+router.get("/index", (req, res) => {
     res.render("note/index", {
         users: User
     })
