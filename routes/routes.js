@@ -44,25 +44,25 @@ router.get("https://notaker.onrender.com/index", (req, res) => {
     })
 })
 
-router.get("https://notaker.onrender.com/new", authMiddleware, getNew)
-router.post("https://notaker.onrender.com/new", authMiddleware, postNew)
+router.get("/new", authMiddleware, getNew)
+router.post("/new", authMiddleware, postNew)
 
 router.get("/login", getLogin)
 router.post("/login", postLogin)
 
-router.get("https://notaker.onrender.com/logout", logout)
+router.get("/logout", logout)
 
 
-router.get("https://notaker.onrender.com/register", getRegister)
-router.post("https://notaker.onrender.com/register", postRegister)
-
-
-
+router.get("/register", getRegister)
+router.post("/register", postRegister)
 
 
 
-router.get("https://notaker.onrender.com/notes", authMiddleware, getNotes)
-router.delete("https://notaker.onrender.com/notes/:id", authMiddleware, deleteNote)
+
+
+
+router.get("/notes", authMiddleware, getNotes)
+router.delete("/notes/:id", authMiddleware, deleteNote)
 
 
 router.use((req, res) => {
