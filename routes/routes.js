@@ -38,31 +38,31 @@ router.get("/", (req, res) => {
 })
 
 
-router.get("/index", (req, res) => {
+router.get("https://notaker.onrender.com/index", (req, res) => {
     res.render("note/index", {
         users: User
     })
 })
 
-router.get("/new", authMiddleware, getNew)
-router.post("/new", authMiddleware, postNew)
+router.get("https://notaker.onrender.com/new", authMiddleware, getNew)
+router.post("https://notaker.onrender.com/new", authMiddleware, postNew)
 
-router.get("/login", getLogin)
-router.post("/login", postLogin)
+router.get("https://notaker.onrender.com/login", getLogin)
+router.post("https://notaker.onrender.com/login", postLogin)
 
-router.get("/logout", logout)
-
-
-router.get("/register", getRegister)
-router.post("/register", postRegister)
+router.get("https://notaker.onrender.com/logout", logout)
 
 
+router.get("https://notaker.onrender.com/register", getRegister)
+router.post("https://notaker.onrender.com/register", postRegister)
 
 
 
 
-router.get("/notes", authMiddleware, getNotes)
-router.delete("/notes/:id", authMiddleware, deleteNote)
+
+
+router.get("https://notaker.onrender.com/notes", authMiddleware, getNotes)
+router.delete("https://notaker.onrender.com/notes/:id", authMiddleware, deleteNote)
 
 
 router.use((req, res) => {
